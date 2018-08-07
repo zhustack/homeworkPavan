@@ -1,0 +1,219 @@
+*:not(head){
+	margin: 0;
+	padding: 0;
+	border: solid 0px black;
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+html{
+	height: 450%;
+	width: 100%;
+}
+body{
+	height: 100%;
+	width: 100%;
+}
+::-webkit-scrollbar {
+	width: 12px;
+}
+::-webkit-scrollbar-track {
+	background: #00091a; 
+}
+::-webkit-scrollbar-thumb {
+	background: #669999; 
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #293d3d; 
+}
+.youKnow{
+	height: 22.22%;
+	width: 100%;
+	background-color: #669999;
+	background-size: 100% 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+}
+#textoInterativo{
+	margin-bottom: 2em;
+	color: white;
+	height: 35%;
+	width: 45%;
+	font-size: 3.5em;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: center; 
+	cursor: default;
+}
+#textoInterativo::after{
+	content: "|";
+	margin-left: 2px;
+	animation: blink .5s infinite;
+}
+#iconeMexendo{
+	margin-bottom: 0.5em;
+	font-weight: bold;
+	font-size: 3em;
+	color: white;
+	animation: topBottom 1s infinite;
+	cursor: pointer;
+}
+#iconeDescer{
+	height: 32px;
+	width: 32px;
+}
+.about{
+	height: 75%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #00091a;
+	text-align: justify;
+}
+.containerTop{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+	border-radius: 0.25em;
+	margin-top: 2.5em;
+}
+.containerTop h1{
+	background: white;
+	padding: 0.25em;
+	border-radius: 0.25em;
+}
+.containerTop img{
+	border-radius: 100%;
+	height: 10em;
+	width: 10em;
+}
+
+@keyframes blink{
+	0%,100%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0;
+	}
+}
+
+@keyframes topBottom{
+	0%,100%{
+		transform: translateY(10px);
+	}
+	50%{
+		transform: translateY(-10px);
+	}
+}
+
+.timeline {
+	position: relative;
+	width: 100%;
+}
+
+.timeline::after{
+	content: '';
+	position: absolute;
+	width: 0.5em;
+	background-color: white;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: -3px;
+}
+
+/* Container around content */
+.container{
+	margin-top: 3em;
+	padding: 10px 40px;
+	position: relative;
+	background-color: inherit;
+	width: 50%
+}
+
+/* The circles on the timeline */
+.container::after{
+	content: '';
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	right: -17px;
+	background-color: white;
+	border: solid 4px lightgray;
+	top: 15px;
+	border-radius: 50%;
+	z-index: 1;
+}
+.left{
+	left: 0;
+}
+.right{
+	left: 50%;
+}
+
+/* Add arrows */
+.left::before{
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 22px;
+	width: 0;
+	z-index: 0;
+	right: 30px;
+	border: medium solid white;
+	border-width: 10px 0 10px 10px;
+	border-color: transparent transparent transparent white;
+}
+.right::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 22px;
+	width: 0;
+	z-index: 1;
+	left: 30px;
+	border: medium solid white;
+	border-width: 10px 10px 10px 0;
+	border-color: transparent white transparent transparent;
+}
+.right::after{
+	left: -16px;
+}
+
+.content {
+	padding: 20px 30px;
+	background-color: white;
+	position: relative;
+	border-radius: 6px;
+}
+
+footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 22.22%;
+	background-color: #669999;
+	color: white;
+	font-size: 1.15em;
+	padding-bottom: 2em;
+}
+footer img{
+	height:8em;
+	width: 8em;
+	border-radius: 50%;
+}
+footer div{
+	width: 80%;
+	margin-bottom: 1.5em;
+}
+footer hr{
+	width: 3.5em;
+	border: 3px solid #00091a;
+	margin: 0.25em 0;
+}
